@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginRight="25dp"
+                        android:columnCount="2"
+                        android:rowCount="8">
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="30dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:text="@string/distance"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/distanceText"
+                            android:layout_height="30dp"
+                            android:layout_row="0"
+                            android:layout_column="1"
+                            android:layout_gravity="right"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_height="30dp"
+                            android:layout_row="1"
+                            android:layout_column="0"
+                            android:text="@string/avgSpeed"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/avgSpeedText"
+                            android:layout_height="30dp"
+                            android:layout_row="1"
+                            android:layout_column="1"
+                            android:layout_gravity="right"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_height="30dp"
+                            android:layout_row="2"
+                            android:layout_column="0"
+                            android:text="@string/breaks"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/breaksText"
+                            android:layout_height="30dp"
+                            android:layout_row="2"
+                            android:layout_column="1"
+                            android:layout_gravity="right"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_height="30dp"
+                            android:layout_row="3"
+                            android:layout_column="0"
+                            android:text="@string/breakTime"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/breaksTimeText"
+                            android:layout_height="30dp"
+                            android:layout_row="3"
+                            android:layout_column="1"
+                            android:layout_gravity="right"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_height="30dp"
+                            android:layout_row="4"
+                            android:layout_column="0"
+                            android:text="@string/runTime"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/totalTimeText"
+                            android:layout_height="30dp"
+                            android:layout_row="4"
+                            android:layout_column="1"
+                            android:layout_gravity="right"
+                            android:textSize="20sp" />
+                    </GridLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center|top">
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="7dp"
+                            android:background="@color/lightBlue"
+                            android:onClick="deleteExercise"
+                            android:text="@string/delete" />
+
+                        <Button
+                            android:id="@+id/saveButton"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="7dp"
+                            android:background="@color/lightBlue"
+                            android:onClick="saveExercise"
+                            android:text="@string/save" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="right">
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center|right"
+                            android:text="@string/zoomLevel"
+                            android:textSize="20sp" />
+
+                        <Spinner
+                            android:id="@+id/zoomLevelsSpinner"
+                            android:layout_width="100dp"
+
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

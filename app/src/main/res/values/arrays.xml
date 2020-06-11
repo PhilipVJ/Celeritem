@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="zoom">
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="exercise">
+        <item>Walk</item>
+        <item>Run</item>
+        <item>Bike</item>
+    </string-array>
+
+    <string-array name="metArray">
+        <item>Walking slow</item>
+        <item>Walking</item>
+        <item>Walking fast</item>
+        <item>Jogging</item>
+        <item>Running</item>
+        <item>Bicycling slow</item>
+        <item>Bicycling</item>
+        <item>Bicycling fast</item>
+    </string-array>
+
+</resources>
